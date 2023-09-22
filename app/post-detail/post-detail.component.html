@@ -1,0 +1,24 @@
+<!-- <div *ngFor="let post of posts">
+    <span>Post id: {{post.id}}</span><br>
+    <span>Post content: {{post.content}}</span><br>
+    <span>Post Likes: {{post.likes}}</span>
+</div> -->
+
+<div>
+    <h2>Fetch Post by ID</h2>
+    <form (ngSubmit)="fetchPostById()">
+      <input type="number" [(ngModel)]="postId" name="postId" />
+      <button type="submit">Fetch Post</button>
+    </form>
+  </div>
+  
+  <div *ngIf="post">
+    <h1>Post Details</h1>
+    <div>
+      <h1>Id: {{ post.id }}</h1>
+      <h2>Content: {{ post.content }}</h2>
+      <h4>By: {{ post.author.name }}</h4>
+    </div>
+    
+  </div>
+  
